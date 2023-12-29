@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "CaroFont";
+  src: url("../../assets/fonts/bank-gothic-light-bt.ttf");
+}
+@font-face {
+  font-family: "CFont";
+  src: url("../../assets/fonts/Aldrich-Regular.ttf");
+}
+.container {
+  background-image:linear-gradient(316deg, rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url(../../assets/FondoArqyDis6.png);
+  background-position:bottom;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-attachment:fixed;
+  height:90vh;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:center;
+  width: 100vw;
+}
+.logoContainer{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+.cLogo{
+  font-family: "CFont";
+  font-size: 200px;
+  color: rgb(210, 29, 29);
+  text-shadow: rgba(0, 0, 0, 0.8) 5px 5px 10px, black 50px 50px, rgba(0, 0, 0, 0.8) 55px 55px 10px;
+  margin-left: -40px;
+}
+.titulo{
+  font-family: "CaroFont";
+  font-size: 100px;
+}

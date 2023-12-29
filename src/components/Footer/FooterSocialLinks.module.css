@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "CaroFont";
+  src: url("../../assets/fonts/bank-gothic-light-bt.ttf");
+}
+@font-face {
+  font-family: "CFont";
+  src: url("../../assets/fonts/Aldrich-Regular.ttf");
+}
+.container a img{
+  width: 30px;
+  margin: 0 20px;
+  filter: invert(38%) sepia(0%) saturate(1%) hue-rotate(219deg) brightness(96%) contrast(93%);
+}
+.container{
+  margin:15px 0px;
+  font-family: "CaroFont";
+  font-size: 20px;
+  p{
+    color: #606060;
+    font-size: 25px;
+  }
+}
+.container a{
+  display: flex;
+  align-items: center;
+}
+.container:hover {
+  filter: invert(13%) sepia(64%) saturate(6103%) hue-rotate(354deg) brightness(98%) contrast(90%);
+}
+.container:hover a{
+  color: #d21d1d
+}

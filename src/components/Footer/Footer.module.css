@@ -1,0 +1,51 @@
+.container{
+  height:40vh;
+  position:relative;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  width: 100vw;
+  background-color: rgb(39, 39, 39);
+}
+.logoContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  border-right: 2px solid rgb(96, 96, 96);
+}
+.cLogo{
+  font-family: "CFont";
+  font-size: 100px;
+  color: rgb(210, 29, 29);
+  text-shadow:  black 25px 25px,rgba(96, 96, 96, 0.8) 5px 5px 10px, rgba(96, 96, 96, 0.8) 30px 30px 10px;
+  margin-left: -40px;
+}
+.titulo{
+  font-family: "CaroFont";
+  font-size: 50px;
+  color: #606060;
+}
+.linksContainer{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.btnContainer{
+  display: flex;
+  width: 55px;
+  height: 55px;
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  background-color: #fffffff8;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.btnContainer a img{
+  display: block;
+  width: 50px;
+  height: 50px;
+}

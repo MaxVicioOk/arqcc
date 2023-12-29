@@ -1,0 +1,27 @@
+.contMain{
+  background-color: rgba(218, 218, 218, 0.935);
+  width: 100vw;
+}
+.contSection{
+  min-height: 100vh;
+}
+.contArticle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgDivContainer{
+  width: 50vw;
+}
+.imgDiv{
+  background-color: grey;
+  width: 700px;
+  height: 700px;
+  margin: 200px auto;
+}
+.textContainer{
+  width: 50vw;
+  padding: 0 300px;
+  border-left: 1px solid black;  
+  border-right: 1px solid black;  
+}
