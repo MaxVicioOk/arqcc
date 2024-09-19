@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "CaroFont";
+  src: url("../../assets/fonts/bank-gothic-light-bt.ttf");
+}
+
+.contArticle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10% 5%;
+  border-radius: 10px;
+}
+.imgDiv{
+  width: 60%;
+  max-height: 40%;
+  img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+  }
+}
+.textContainer{
+  color: white;
+  width: 50vw;
+  padding: 0 2%;
+  margin: 10px 0px;
+  p{
+    font-size: 20px;
+    text-shadow: 2px 2px 2px black;
+  }
+}
+.titleContainer{
+  color: black;
+  font-size: 50px;
+  margin: 20px 0px;
+}

@@ -1,34 +1,29 @@
 import React from 'react'
 import styles from './HomeMain.module.css'
+import Separator from '../Separator/Separator'
+import ArticleHome from './ArticleHome'
 
 export default function HomeMain() {
+  const imgInt = "/src/assets/interiores/inte.png"
+  const stand = "/src/assets/stands expo/IMAGEN1.png"
+  const imgExt = "/src/assets/viviendas/renders realista..4 con marca de agua.png"
+  const imgOffice = "/src/assets/oficinas/ofi interior 2mas1.png"
+  const titleExt = "EXTERIORES"
+  const textExt = "Creamos exteriores impresionantes que armonizan con el entorno natural. Desde jardines modernos hasta fachadas innovadoras, nuestros diseños exteriores son el perfecto equilibrio entre estética y funcionalidad."
+  const titleInt = "INTERIORES"
+  const textInt = "Nuestros diseños de interiores transforman espacios en lugares de vida y trabajo inspiradores. Combinamos creatividad y funcionalidad para crear ambientes únicos que reflejan la personalidad y necesidades de nuestros clientes."
+  const titleOffice = "OFICINAS"
+  const textOffice = "texto de descripción de oficinas"
+  const titleStand = "ESTANDS DE EXPOSICIÓN"
+  const textStand = "texto de descripción de stands de exposición"
   return (
     <main className={styles.contMain}>
+      <Separator/>
       <section className={styles.contSection}>
-        <article className={styles.contArticle}>
-          <div className={styles.imgDivContainer}>
-            <div className={styles.imgDiv}>
-              <img src="" alt="" />
-            </div>
-          </div>
-          <div className={styles.textContainer}>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eveniet eos nisi corporis accusamus ratione nulla fugiat vitae laborum iusto commodi inventore deleniti placeat officiis, ipsam mollitia nam! Beatae, delectus!
-            </p>
-          </div>
-        </article>
-        <article className={styles.contArticle}>
-          <div className={styles.textContainer}>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eveniet eos nisi corporis accusamus ratione nulla fugiat vitae laborum iusto commodi inventore deleniti placeat officiis, ipsam mollitia nam! Beatae, delectus!
-            </p>
-          </div>
-          <div className={styles.imgDivContainer}>
-            <div className={styles.imgDiv}>
-              <img src="" alt="" />
-            </div>
-          </div>
-        </article>
+        <ArticleHome img={imgExt} textRight={false} myTitle={titleExt} myText={textExt}/>
+        <ArticleHome img={imgInt} textRight={true} myTitle={titleInt} myText={textInt}/>
+        <ArticleHome img={imgOffice} textRight={false} myTitle={titleOffice} myText={textOffice}/>
+        <ArticleHome img={stand} textRight={true} myTitle={titleStand} myText={textStand}/>
       </section>
     </main>
   )

@@ -1,3 +1,11 @@
 #root {
-  
+    @font-face {
+        font-family: "CaroFont";
+        src: url("../../assets/fonts/bank-gothic-light-bt.ttf");
+    }
+    @font-face {
+        font-family: "CFont";
+        src: url("../../assets/fonts/Aldrich-Regular.ttf");
+    }
+    font-family: "CaroFont"
 }

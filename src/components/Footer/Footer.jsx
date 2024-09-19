@@ -25,7 +25,7 @@ export default function Footer() {
   ]
   return (
     <>
-      <footer className={styles.container}>
+      <footer id="redes" className={styles.container}>
         <div className={styles.logoContainer}>
           <h2 className={styles.cLogo}>C</h2>
           <h3 className={styles.titulo}>ARQUITECTURA | DISEÑO</h3>
