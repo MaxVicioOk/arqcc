@@ -4,10 +4,10 @@ import Separator from '../Separator/Separator'
 import ArticleHome from './ArticleHome'
 
 export default function HomeMain() {
-  const imgInt = "/src/assets/interiores/inte.png"
-  const stand = "/src/assets/stands expo/IMAGEN1.png"
-  const imgExt = "/src/assets/viviendas/renders realista..4 con marca de agua.png"
-  const imgOffice = "/src/assets/oficinas/ofi interior 2mas1.png"
+  const imgInt = "/assets/interiores/inte.png"
+  const stand = "/assets/stands expo/IMAGEN1.png"
+  const imgExt = "/assets/viviendas/renders realista..4 con marca de agua.png"
+  const imgOffice = "/assets/oficinas/ofi interior 2mas1.png"
   const titleExt = "EXTERIORES"
   const textExt = "Creamos exteriores impresionantes que armonizan con el entorno natural. Desde jardines modernos hasta fachadas innovadoras, nuestros diseños exteriores son el perfecto equilibrio entre estética y funcionalidad."
   const titleInt = "INTERIORES"

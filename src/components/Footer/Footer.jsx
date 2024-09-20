@@ -8,19 +8,19 @@ export default function Footer() {
       id:1,
       name: "Instagram",
       url: "https://www.instagram.com/arq.cagliuso/",
-      imgSrc:"./src/assets/instagramLogo.png",
+      imgSrc:"/assets/instagramLogo.png",
     },
     {
       id:2,
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/carolina-yanina-cagliuso/",
-      imgSrc:"./src/assets/linkedinLogo.png"
+      imgSrc:"/assets/linkedinLogo.png"
     },
     {
       id:3,
       name: "E-Mail",
       url: "mailto:arq.carolinacagliuso@outlook.es?subject=Consulta",
-      imgSrc:"./src/assets/mailLogo.png"
+      imgSrc:"/assets/mailLogo.png"
     }
   ]
   return (
@@ -40,7 +40,7 @@ export default function Footer() {
       </footer>
       <div className={styles.btnContainer}>
         <a href="https://wa.me/+5491166749430" target="_blank" >
-          <img src="./src/assets/whatsappLogo.png" alt="button whatsapp" />
+          <img src="/assets/whatsappLogo.png" alt="button whatsapp" />
         </a>
       </div>
     </>

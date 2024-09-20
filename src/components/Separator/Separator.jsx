@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Separator.module.css'
 
 export default function Separator() {
-  const profPic = "/src/assets/caroPerfil.png"
+  const profPic = "/assets/caroPerfil.png"
   return (
     <div id="CC" className={styles.container}>
       <img src={profPic} alt="foto degradé b&n" />
