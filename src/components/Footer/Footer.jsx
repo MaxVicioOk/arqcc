@@ -1,6 +1,7 @@
 import React from 'react'
 import FooterSocialLinks from './FooterSocialLinks'
 import styles from './Footer.module.css'
+import imgWasa from "./src/assets/whatsappLogo.png"
 
 export default function Footer() {
   const socialLiks = [
@@ -40,7 +41,7 @@ export default function Footer() {
       </footer>
       <div className={styles.btnContainer}>
         <a href="https://wa.me/+5491166749430" target="_blank" >
-          <img src="./src/assets/whatsappLogo.png" alt="button whatsapp" />
+          <img src={imgWasa} alt="button whatsapp" />
         </a>
       </div>
     </>
