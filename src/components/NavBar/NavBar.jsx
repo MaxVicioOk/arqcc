@@ -27,11 +27,11 @@ export default function NavBar() {
       </button>
       <ul className={styles.list}>
         <li><Link to={`/`}>Inicio</Link></li>
-        <li><a href='#CC'>Nosotros</a></li>
+        <li><a href='#CC'>Arquitecta</a></li>
         <li><a href='#EXTERIORES'>Exteriores</a></li>
         <li><a href='#INTERIORES'>Interiores</a></li>
         <li><a href='#OFICINAS'>Oficinas</a></li>
-        <li><a href='#redes'>Redes</a></li>
+        <li><a href='#redes'>Contacto</a></li>
       </ul>
     </nav>
   )
