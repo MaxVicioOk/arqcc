@@ -16,3 +16,9 @@ body{
   background-size:cover;
   background-attachment:fixed;
 }
+
+@media (orientation: portrait) {
+  body{
+    width: 100vw;
+  }
+}
