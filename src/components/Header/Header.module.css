@@ -28,20 +28,11 @@
   font-size: 80px;
 }
 
-@media (max-width:800px) {
-  .cLogo{
-    font-size: 150px;
-    text-shadow: rgba(0, 0, 0, 0.8) 5px 5px 10px, black 40px 40px, rgba(0, 0, 0, 0.8) 45px 45px 10px;
-  }
-  .titulo{
-    font-size: 50px;
-  }
-}
 
 @media (max-width: 1440px) and (orientation: portrait) {
   .container{
     height: 95vh;
-    width: 90vw;
+    width: 100%;
     position: relative;
     top: 0px;
   }
@@ -56,3 +47,14 @@
     margin-top: 30% 0%;
   }
 }
+
+    @media (max-width:800px) {
+      .cLogo{
+        font-size: 150px;
+        text-shadow: rgba(0, 0, 0, 0.8) 5px 5px 10px, black 40px 40px, rgba(0, 0, 0, 0.8) 45px 45px 10px;
+      }
+      .titulo{
+        margin: 0% auto;
+        font-size: 26px;
+      }
+    }

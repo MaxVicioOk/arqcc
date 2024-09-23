@@ -31,6 +31,16 @@
   color: #d21d1d
 }
 
+
+@media (max-width: 800px) and (orientation: portrait){
+  .container a p{
+    font-size: 40px;
+  }
+  .container a img{
+    width: 30px;
+  }
+}
+
 @media (max-width: 800px) {
   .container{
     margin: 5px 0px;
@@ -41,14 +51,5 @@
   .container a img{
     width: 20px;
     margin: 0px 10px;
-  }
-}
-
-@media (max-width: 800px) and (orientation: portrait){
-  .container a p{
-    font-size: 40px;
-  }
-  .container a img{
-    width: 30px;
   }
 }

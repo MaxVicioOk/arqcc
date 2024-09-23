@@ -51,28 +51,6 @@
   height: 50px;
 }
 
-@media (max-width: 800px) {
-  .cLogo{
-    font-size: 65px;
-    text-shadow:  black 18px 18px,rgba(96, 96, 96, 0.8) 3px 3px 8px, rgba(96, 96, 96, 0.8) 21px 21px 8px;
-  }
-  .titulo{
-    font-size: 24px;
-  }
-  .container{
-    height: 30vh;
-  }
-  .btnContainer{
-    width: 40px;
-    height: 40px;
-    right: 5px;
-    bottom: 5px;
-    a img{
-      width: 35px;
-      height: 35px;
-    }
-  }
-}
 
 @media (max-width: 1440px) and (orientation: portrait){
   .container{
@@ -105,6 +83,29 @@
     a img{
       width: 85px;
       height: 85px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .cLogo{
+    font-size: 65px;
+    text-shadow:  black 18px 18px,rgba(96, 96, 96, 0.8) 3px 3px 8px, rgba(96, 96, 96, 0.8) 21px 21px 8px;
+  }
+  .titulo{
+    font-size: 24px;
+  }
+  .container{
+    height: 30vh;
+  }
+  .btnContainer{
+    width: 40px;
+    height: 40px;
+    right: 5px;
+    bottom: 5px;
+    a img{
+      width: 35px;
+      height: 35px;
     }
   }
 }
