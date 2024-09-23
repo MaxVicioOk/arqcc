@@ -1,9 +1,4 @@
 .container {
-  background-image:linear-gradient(316deg, rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url(../../assets/FondoArqyDis6.png);
-  background-position:bottom;
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-attachment:fixed;
   height:90vh;
   position:sticky;
   display:flex;
@@ -31,4 +26,32 @@
 .titulo{
   font-family: "CaroFont";
   font-size: 80px;
+}
+
+@media (max-width:800px) {
+  .cLogo{
+    font-size: 150px;
+    text-shadow: rgba(0, 0, 0, 0.8) 5px 5px 10px, black 40px 40px, rgba(0, 0, 0, 0.8) 45px 45px 10px;
+  }
+  .titulo{
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
+  .container{
+    height: 95vh;
+    position: relative;
+    top: 0px;
+  }
+  .cLogo{
+    font-size: 250px;
+    text-shadow: rgba(0, 0, 0, 0.8) 15px 15px 10px, black 75px 75px, rgba(0, 0, 0, 0.8) 85px 85px 10px;
+    margin: 20% 0%;
+    margin-left: -50px;
+  }
+  .titulo{
+    font-size: 40px;
+    margin-top: 30% 0%;
+  }
 }

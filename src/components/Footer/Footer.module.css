@@ -43,9 +43,68 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  z-index: 1000;
 }
 .btnContainer a img{
   display: block;
   width: 50px;
   height: 50px;
+}
+
+@media (max-width: 800px) {
+  .cLogo{
+    font-size: 65px;
+    text-shadow:  black 18px 18px,rgba(96, 96, 96, 0.8) 3px 3px 8px, rgba(96, 96, 96, 0.8) 21px 21px 8px;
+  }
+  .titulo{
+    font-size: 24px;
+  }
+  .container{
+    height: 30vh;
+  }
+  .btnContainer{
+    width: 40px;
+    height: 40px;
+    right: 5px;
+    bottom: 5px;
+    a img{
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+@media (max-width: 800px) and (orientation: portrait){
+  .container{
+    flex-direction: column;
+    height: 50vh;
+  }
+  .logoContainer{
+    border-right: 0px;
+    height: 49%;
+    width: 100%;
+  }
+  .cLogo{
+    font-size: 110px;
+    text-shadow:  black 30px 30px,rgba(96, 96, 96, 0.8) 5px 5px 8px, rgba(96, 96, 96, 0.8) 35px 35px 8px;
+  }
+  .titulo{
+    font-size: 45px;
+    margin: 2% 0%;
+  }
+  .linksContainer{
+    border-top: 2px solid rgb(96, 96, 96);
+    margin: 0% auto;
+    padding: 7% 0% 0% 0%;
+  }
+  .btnContainer{
+    width: 90px;
+    height: 90px;
+    right: 5px;
+    bottom: 70px;
+    a img{
+      width: 85px;
+      height: 85px;
+    }
+  }
 }

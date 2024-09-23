@@ -4,7 +4,7 @@ import styles from './ArticleHome.module.css'
 export default function ArticleHome({img, textRight, myTitle, myText}) {
   return (
     <>{ textRight ? 
-      <article id={myTitle} className={styles.contArticle}>
+      <article id={myTitle} className={styles.contArticleR}>
         <div className={styles.imgDiv}>
           <img src={img} alt="" />
         </div>
@@ -17,7 +17,7 @@ export default function ArticleHome({img, textRight, myTitle, myText}) {
           </p>
         </div>
       </article> :
-      <article id={myTitle} className={styles.contArticle}>
+      <article id={myTitle} className={styles.contArticleL}>
         <div className={styles.textContainer}>
           <h2 className={styles.titleContainer}>
             {myTitle}

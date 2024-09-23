@@ -3,7 +3,8 @@
   src: url("../../assets/fonts/bank-gothic-light-bt.ttf");
 }
 
-.contArticle{
+.contArticleR,
+.contArticleL{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,4 +34,46 @@
   color: black;
   font-size: 50px;
   margin: 20px 0px;
+}
+
+@media (max-width: 800px) {
+  .textContainer{
+    p{
+      font-size: 16px;
+    }
+  }
+  .titleContainer{
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
+  .imgDiv{
+    width: 100%;
+  }
+  .contArticleR,
+  .contArticleL{
+    margin: 0px;
+    margin-bottom: 50px;
+    div{
+      width: 100vw;
+      text-align: center;
+      img{
+        border-radius: 0px;
+        box-shadow: 0px 0px 0px black;
+      }
+      p{
+        font-size: 28px;
+      }
+      .titleContainer{
+        font-size: 60px;
+      }
+    }
+  }
+  .contArticleR{
+    flex-direction: column;
+  }
+  .contArticleL{
+    flex-direction: column-reverse;
+  }
 }
