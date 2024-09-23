@@ -74,7 +74,7 @@
   }
 }
 
-@media (max-width: 800px) and (orientation: portrait){
+@media (max-width: 1440px) and (orientation: portrait){
   .container{
     flex-direction: column;
     height: 50vh;

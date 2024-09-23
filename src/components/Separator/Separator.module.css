@@ -37,18 +37,18 @@
   }
 }
 
-@media (max-width: 800px) and (orientation: portrait) {
+@media (max-width: 1440px) and (orientation: portrait) {
   .container{
     flex-direction: column;
     height: 100%;
     img{
-      width: 100vw;
+      width: 100%;
       mask-image: linear-gradient(to bottom, black, transparent);
     }
     div{
       padding: 10% 5%;
       h2{
-        font-size: 60px;
+        font-size: 50px;
       }
       p{
         font-size: 28px;
