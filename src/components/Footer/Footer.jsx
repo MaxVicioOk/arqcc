@@ -1,13 +1,8 @@
-import { useState } from "react";
 import styles from "./Footer.module.css";
 import { site } from "../../data/projects";
 import { ArrowUpRight, Instagram, Linkedin, Mail } from "../Icons/Icons";
 
 export default function Footer() {
-  const [showContacts, setShowContacts] = useState(false);
-
-  const toggleContacts = () => setShowContacts((v) => !v);
-
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -49,46 +44,34 @@ export default function Footer() {
 
           <div className={styles.connectBlock}>
             <p className={styles.blockTitle}>Conectar</p>
-            <button
-              type="button"
-              onClick={toggleContacts}
-              className={styles.toggleBtn}
-              aria-expanded={showContacts}
-            >
-              {showContacts ? "Ocultar contacto" : "Mostrar contacto"}
-              <ArrowUpRight />
-            </button>
-
-            {showContacts && (
-              <ul className={styles.socialList}>
-                <li>
-                  <a
-                    href={site.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Instagram size={16} />
-                    <span>Instagram</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={site.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Linkedin size={16} />
-                    <span>LinkedIn</span>
-                  </a>
-                </li>
-                <li>
-                  <a href={`mailto:${site.email}`}>
-                    <Mail size={16} />
-                    <span>Email</span>
-                  </a>
-                </li>
-              </ul>
-            )}
+            <ul className={styles.socialList}>
+              <li>
+                <a
+                  href={site.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Instagram size={16} />
+                  <span>Instagram</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={site.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin size={16} />
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a href={`mailto:${site.email}`}>
+                  <Mail size={16} />
+                  <span>Email</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
