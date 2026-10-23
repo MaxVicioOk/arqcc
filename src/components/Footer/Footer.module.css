@@ -1,113 +1,247 @@
-.container{
-  height:40vh;
-  position:relative;
-  display:flex;
-  justify-content:flex-start;
-  align-items:center;
-  width: 100%;
-  background-color: rgb(39, 39, 39);
+.footer {
+  position: relative;
+  background: #0a0a0b;
+  color: var(--text-on-dark);
+  border-top: 1px solid var(--line-dark);
 }
-.logoContainer{
+
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 0.6fr));
+  align-items: start;
+  gap: clamp(28px, 6vw, 80px);
+  padding-top: clamp(42px, 7vw, 72px);
+  padding-bottom: clamp(28px, 5vw, 52px);
+}
+
+/* Brand ------------------------------------------------------------------ */
+
+.brandBlock {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 16px;
+}
+
+.brand {
+  display: inline-flex;
   align-items: center;
-  width: 50vw;
-  border-right: 2px solid rgb(96, 96, 96);
+  gap: 14px;
 }
-.cLogo{
-  font-family: "CFont";
-  font-size: 100px;
-  color: rgb(210, 29, 29);
-  text-shadow:  black 25px 25px,rgba(96, 96, 96, 0.8) 5px 5px 10px, rgba(96, 96, 96, 0.8) 30px 30px 10px;
-  margin-left: -40px;
+
+.brandMark {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 3px;
+  background: var(--accent);
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: #fff;
+  flex: none;
 }
-.titulo{
-  font-family: "CaroFont";
-  font-size: 40px;
-  color: #606060;
-}
-.linksContainer{
+
+.brandText {
   display: flex;
   flex-direction: column;
-  margin: auto;
+  gap: 4px;
 }
-.btnContainer{
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.brandSub {
+  font-family: var(--font-label);
+  font-size: 9px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--text-on-dark-soft);
+}
+
+.brandDesc {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(243, 239, 232, 0.5);
+}
+
+/* Blocks ------------------------------------------------------------------ */
+
+.blockTitle {
+  margin-bottom: 18px;
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-on-dark-soft);
+}
+
+.navBlock ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 10px;
+  column-gap: 18px;
+}
+
+.navBlock a {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--text-on-dark-soft);
+  transition: color 0.25s var(--ease-soft);
+}
+
+.navBlock a:hover {
+  color: var(--text-on-dark);
+}
+
+/* Connect ----------------------------------------------------------------- */
+
+.toggleBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line-dark);
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-on-dark);
+  transition:
+    color 0.3s var(--ease-soft),
+    border-color 0.3s var(--ease-soft);
+}
+
+.toggleBtn svg {
+  transition: transform 0.35s var(--ease-soft);
+}
+
+.toggleBtn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.toggleBtn:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.socialList {
   display: flex;
-  width: 55px;
-  height: 55px;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.socialList a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text-on-dark-soft);
+  transition: color 0.25s var(--ease-soft);
+}
+
+.socialList a:hover {
+  color: var(--text-on-dark);
+}
+
+.socialList svg {
+  color: var(--text-on-dark-soft);
+  transition: color 0.25s var(--ease-soft);
+}
+
+.socialList a:hover svg {
+  color: var(--accent);
+}
+
+/* Bottom ------------------------------------------------------------------ */
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-block: 18px;
+  border-top: 1px solid var(--line-dark);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(243, 239, 232, 0.38);
+}
+
+.topLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-on-dark-soft);
+  transition: color 0.3s var(--ease-soft);
+}
+
+.topLink svg {
+  transition: transform 0.35s var(--ease-soft);
+}
+
+.topLink:hover {
+  color: var(--text-on-dark);
+}
+
+.topLink:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* WhatsApp ---------------------------------------------------------------- */
+
+.whatsapp {
   position: fixed;
-  right: 5px;
-  bottom: 5px;
-  background-color: #fffffff8;
-  justify-content: center;
-  align-items: center;
+  right: clamp(12px, 2vw, 24px);
+  bottom: clamp(12px, 2vw, 24px);
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  z-index: 1000;
-}
-.btnContainer a img{
-  display: block;
-  width: 50px;
-  height: 50px;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.42);
+  transition:
+    transform 0.35s var(--ease),
+    box-shadow 0.35s var(--ease);
 }
 
+.whatsapp:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 36px 72px rgba(0, 0, 0, 0.48);
+}
 
-@media (max-width: 1440px) and (orientation: portrait){
-  .container{
+/* Responsive -------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+
+  .navBlock ul {
+    grid-template-columns: repeat(4, minmax(0, max-content));
+  }
+}
+
+@media (max-width: 640px) {
+  .navBlock ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bottom {
     flex-direction: column;
-    height: 40vh;
+    align-items: flex-start;
   }
-  .logoContainer{
-    border-right: 0px;
-    height: 50%;
-    width: 100%;
-  }
-  .cLogo{
-    font-size: 110px;
-    text-shadow:  black 30px 30px,rgba(96, 96, 96, 0.8) 5px 5px 8px, rgba(96, 96, 96, 0.8) 35px 35px 8px;
-  }
-  .titulo{
-    font-size: 45px;
-    margin: 2% 0%;
-  }
-  .linksContainer{
-    height: 50%;
-    border-top: 2px solid rgb(96, 96, 96);
-    margin: 0%;
-    justify-content: space-evenly;
-  }
-  .btnContainer{
-    width: 90px;
-    height: 90px;
-    right: 5px;
-    bottom: 70px;
-    a img{
-      width: 85px;
-      height: 85px;
-    }
-  }
-}
 
-@media (max-width: 800px) {
-  .cLogo{
-    padding-top: 5%;
-    font-size: 65px;
-    text-shadow:  black 18px 18px,rgba(96, 96, 96, 0.8) 3px 3px 8px, rgba(96, 96, 96, 0.8) 21px 21px 8px;
-  }
-  .titulo{
-    font-size: 24px;
-  }
-  .container{
-    height: 50vh;
-  }
-  .btnContainer{
-    width: 40px;
-    height: 40px;
-    right: 5px;
-    bottom: 5px;
-    a img{
-      width: 35px;
-      height: 35px;
-    }
+  .whatsapp {
+    width: 52px;
+    height: 52px;
   }
 }

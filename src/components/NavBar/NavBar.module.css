@@ -1,129 +1,353 @@
-@font-face {
-  font-family: "CaroFont";
-  src: url("../../assets/fonts/bank-gothic-light-bt.ttf");
-}
-@font-face {
-  font-family: "CFont";
-  src: url("../../assets/fonts/Aldrich-Regular.ttf");
-}
-.navBar{
-  display: flex;
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 90;
   width: 100%;
-  overflow: hidden;
-  justify-content: center;
-  transition: 0.5s;
-  position:absolute;
-  top: 0px;
-  z-index: 100;
+  transition:
+    background-color 0.45s var(--ease-soft),
+    border-color 0.45s var(--ease-soft),
+    backdrop-filter 0.45s var(--ease-soft);
+  border-bottom: 1px solid transparent;
 }
-.navBarShadow{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  transition: 0.5s;
-  position:sticky;
-  top: 0px;
-  background-color: rgba(0, 0, 0, 0.3);
-  transition: 0.5s;
-  height: 55px;
-  z-index: 100;
-  a{
-    color:rgba(255, 255, 255, 0.746);
-    transition: 0.5s;
-  }
+
+.scrolled {
+  background-color: rgba(13, 13, 14, 0.82);
+  border-bottom-color: var(--line-dark);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
 }
-.list{
-  list-style-type: none;
-  font-family: "CaroFont";
+
+.inner {
+  position: relative;
+  z-index: 2;
   display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.5vw, 34px);
+  height: var(--nav-h);
+}
+
+/* Brand ------------------------------------------------------------------ */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex: none;
+}
+
+.brandMark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 3px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
   font-size: 25px;
-  li{
-    padding: 10px 30px;
-    margin: 0px 10px;
-    border-radius: 50px;
-    transition: 0.5s;
-    .list li a{
-      transition: 0.5s;
-      color:rgba(255, 255, 255, 0.746);
-    }
-  }
+  line-height: 1;
+  transition: background-color 0.35s var(--ease-soft);
 }
-.navBar:hover,
-.navBarShadow:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-  transition: 0.5s;
-  height: 55px;
-  .list li a{
-    transition: 0.5s;
-    color:rgba(255, 255, 255, 0.746);
-  }
+
+.brand:hover .brandMark {
+  background: var(--accent-bright);
 }
-.list li:hover a{
-  text-shadow: rgba(0, 0, 0, 0.8) 5px 5px 10px;
-  font-size: 30px;
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
 }
-.togglerButton{
-  border:none;
-  background: none;
+
+.brandText strong {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-on-dark);
+}
+
+.brandText span {
+  font-family: var(--font-label);
+  font-size: 9.5px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-on-dark-soft);
+}
+
+/* Desktop navigation ------------------------------------------------------ */
+
+.desktopNav {
+  margin-left: auto;
+}
+
+.desktopNav ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.6vw, 38px);
+}
+
+.desktopNav a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 0;
+  font-family: var(--font-label);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-on-dark-soft);
+  transition: color 0.3s var(--ease-soft);
+}
+
+.desktopNav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s var(--ease);
+}
+
+.desktopNav a:hover,
+.desktopNav .active {
+  color: var(--text-on-dark);
+}
+
+.desktopNav a:hover::after,
+.desktopNav .active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.cta {
+  min-height: 42px;
+  padding: 0 20px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  flex: none;
+}
+
+/* Burger ------------------------------------------------------------------ */
+
+.burger {
   display: none;
+  width: 46px;
+  height: 46px;
+  margin-left: auto;
+  place-items: center;
+  border: 1px solid var(--line-dark);
+  border-radius: 50%;
+  transition:
+    border-color 0.3s var(--ease-soft),
+    background-color 0.3s var(--ease-soft);
 }
 
-@media (max-width:800px) {
-  .list{ 
-    font-size: 18px;
-    li{
-    padding: 5px 10px;
-    margin: 0px 5px;
-    }
-  }
-  .navBarShadow{
-    height: auto;
-  }
+.burger:hover {
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
-@media (max-width: 1440px) and (orientation: portrait) {
-  .navBar,
-  .navBarShadow{
+.burgerBox {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 12px;
+}
+
+.burgerBox span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--text-on-dark);
+  transition: transform 0.4s var(--ease);
+}
+
+.burgerBox span:first-child {
+  top: 0;
+}
+
+.burgerBox span:last-child {
+  bottom: 0;
+}
+
+.burgerActive .burgerBox span:first-child {
+  transform: translateY(5.25px) rotate(45deg);
+}
+
+.burgerActive .burgerBox span:last-child {
+  transform: translateY(-5.25px) rotate(-45deg);
+}
+
+/* Scroll progress --------------------------------------------------------- */
+
+.progress {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 2px;
+  background: var(--accent);
+  transform-origin: left center;
+  transition: transform 0.12s linear;
+  z-index: 3;
+}
+
+/* Mobile menu ------------------------------------------------------------- */
+
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  padding: calc(var(--nav-h) + 32px) var(--gutter) 32px;
+  background:
+    radial-gradient(circle at 85% 12%, rgba(210, 29, 29, 0.22), transparent 55%),
+    #0d0d0e;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+  transition:
+    opacity 0.4s var(--ease-soft),
+    transform 0.5s var(--ease),
+    visibility 0.4s;
+  overflow-y: auto;
+}
+
+.mobileOpen {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.mobileMenu nav ul {
+  border-top: 1px solid var(--line-dark);
+}
+
+.mobileMenu nav li {
+  border-bottom: 1px solid var(--line-dark);
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.5s var(--ease),
+    transform 0.5s var(--ease);
+}
+
+.mobileOpen nav li {
+  opacity: 1;
+  transform: none;
+}
+
+.mobileOpen nav li:nth-child(1) {
+  transition-delay: 0.08s;
+}
+
+.mobileOpen nav li:nth-child(2) {
+  transition-delay: 0.14s;
+}
+
+.mobileOpen nav li:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.mobileOpen nav li:nth-child(4) {
+  transition-delay: 0.26s;
+}
+
+.mobileMenu nav a {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: clamp(14px, 3vh, 22px) 0;
+  font-family: var(--font-display);
+  font-size: clamp(32px, 9vw, 48px);
+  line-height: 1.05;
+  color: var(--text-on-dark);
+}
+
+.mobileMenu nav a span {
+  font-family: var(--font-label);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+}
+
+.mobileFoot {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobileFoot > a {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--text-on-dark-soft);
+  overflow-wrap: anywhere;
+}
+
+.mobileSocials {
+  display: flex;
+  gap: 10px;
+}
+
+.mobileSocials a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line-dark);
+  border-radius: 50%;
+  color: var(--text-on-dark);
+  transition:
+    background-color 0.3s var(--ease-soft),
+    border-color 0.3s var(--ease-soft);
+}
+
+.mobileSocials a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Responsive -------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .desktopNav,
+  .cta {
     display: none;
-  /*   z-index: 10;
-    width: 100%;
-    height: 95vh;
-    background-color: rgb(39, 39, 39);
-    transition: 0s;
-    top: 0px;
-    button{
-      position: absolute;
-      right:10px;
-      top: 10px;
-    }
-    :hover{
-      width: 100%;
-      height: 95vh;
-      transition: 0s;
-      background-color: rgb(39, 39, 39);
-    } */
   }
-  /* .list{
+
+  .burger,
+  .mobileMenu {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    li{
-      font-size: 30px;
-      align-self: center;
-      :hover a{
-        font-size: 40px;
-      }
-      a {
-        font-size: 35px;
-        color: aliceblue;
-      }
-    }
-  } */
-  .togglerButton{
-    display: flex;
-    z-index: 1000;
-    img{
-      width: 100px;
-    }
+  }
+
+  .burger {
+    display: grid;
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --nav-h: 72px;
+  }
+
+  .brandMark {
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+  }
+
+  .brandText strong {
+    font-size: 11.5px;
+  }
+
+  .brandText span {
+    font-size: 8px;
+    letter-spacing: 0.2em;
   }
 }

@@ -1,0 +1,58 @@
+.section {
+  position: relative;
+  padding-block: clamp(84px, 11vw, 150px);
+  background:
+    radial-gradient(circle at 85% 10%, rgba(210, 29, 29, 0.16), transparent 50%),
+    var(--ink);
+  color: var(--text-on-dark);
+}
+
+.ctaWrap {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 5vw, 44px);
+  max-width: 980px;
+}
+
+.title {
+  margin-top: clamp(18px, 2vw, 26px);
+  font-size: clamp(40px, 7vw, 96px);
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+}
+
+.titleAccent {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(243, 239, 232, 0.82);
+  text-stroke: 1px rgba(243, 239, 232, 0.82);
+}
+
+.text {
+  max-width: 640px;
+  margin-top: clamp(18px, 2.2vw, 26px);
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.8;
+  color: var(--text-on-dark-soft);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btnDark {
+  border-color: rgba(255, 255, 255, 0.36);
+  color: #fff;
+}
+
+.btnDark:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 560px) {
+  .titleAccent {
+    -webkit-text-stroke-width: 0.8px;
+  }
+}

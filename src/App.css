@@ -1,11 +1,4 @@
+/* Legacy styles preserved for components that might still rely on them */
 #root {
-    @font-face {
-        font-family: "CaroFont";
-        src: url("../../assets/fonts/bank-gothic-light-bt.ttf");
-    }
-    @font-face {
-        font-family: "CFont";
-        src: url("../../assets/fonts/Aldrich-Regular.ttf");
-    }
-    font-family: "CaroFont"
+  font-family: var(--font-body);
 }

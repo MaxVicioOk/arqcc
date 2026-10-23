@@ -1,19 +1,26 @@
-import './App.css'
-import { BrowserRouter, Routes , Route } from 'react-router-dom'
-import Home from './components/Home/Home.jsx'
-import Footer from './components/Footer/Footer.jsx'
-import ErrorPage from './components/ErrorPage/ErrorPage.jsx'
+import Hero from "./components/Hero/Hero";
+import NavBar from "./components/NavBar/NavBar";
+import Ticker from "./components/Ticker/Ticker";
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
+import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={ <Home /> } />
-        <Route path="*" element={ <ErrorPage /> } />
-      </Routes>
-      <Footer/>
-    </BrowserRouter>
-  )
+    <div className="app">
+      <NavBar />
+      <main>
+        <Hero />
+        <Ticker />
+        <About />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,125 @@
+import { site } from "../../data/projects";
+import {
+  ArrowUpRight,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+} from "../Icons/Icons";
+import Reveal from "../Reveal/Reveal";
+import styles from "./Contact.module.css";
+
+const channels = [
+  {
+    label: "Email",
+    value: site.email,
+    href: `mailto:${site.email}?subject=Consulta%20de%20proyecto`,
+    icon: Mail,
+    external: false,
+  },
+  {
+    label: "Teléfono / WhatsApp",
+    value: site.phone,
+    href: `https://wa.me/${site.whatsapp}`,
+    icon: Phone,
+    external: true,
+  },
+  {
+    label: "Instagram",
+    value: "@arq.cagliuso",
+    href: site.instagram,
+    icon: Instagram,
+    external: true,
+  },
+  {
+    label: "LinkedIn",
+    value: "Carolina Yanina Cagliuso",
+    href: site.linkedin,
+    icon: Linkedin,
+    external: true,
+  },
+];
+
+export default function Contact() {
+  return (
+    <section id="contacto" className={styles.section}>
+      <div className="container">
+        <Reveal>
+          <p className="eyebrow">Contacto</p>
+        </Reveal>
+
+        <div className={styles.head}>
+          <Reveal>
+            <h2 className={styles.title}>
+              ¿Tenés una idea?
+              <br />
+              <span className={styles.titleAccent}>Hagámosla espacio.</span>
+            </h2>
+          </Reveal>
+
+          <Reveal delay={100} className={styles.headText}>
+            <p>
+              Contanos qué tenés en mente: una vivienda, una reforma, un espacio
+              de trabajo o un stand. Te respondemos con una primera mirada sobre
+              el proyecto y los próximos pasos.
+            </p>
+          </Reveal>
+        </div>
+
+        <div className={styles.grid}>
+          <Reveal className={styles.actionsWrap}>
+            <div className={styles.actions}>
+              <a
+                href={`mailto:${site.email}?subject=Consulta%20de%20proyecto`}
+                className="btn btnSolid"
+              >
+                Escribinos
+                <Mail size={17} />
+              </a>
+              <a
+                href={`https://wa.me/${site.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`btn ${styles.btnDark}`}
+              >
+                WhatsApp
+                <ArrowUpRight />
+              </a>
+            </div>
+            <p className={styles.note}>
+              Respondemos consultas de proyectos, colaboraciones y prensa.
+            </p>
+          </Reveal>
+
+          <Reveal delay={120} className={styles.listWrap}>
+            <ul className={styles.list}>
+              {channels.map((channel) => {
+                const Icon = channel.icon;
+                return (
+                  <li key={channel.label}>
+                    <a
+                      href={channel.href}
+                      target={channel.external ? "_blank" : undefined}
+                      rel={channel.external ? "noopener noreferrer" : undefined}
+                    >
+                      <span className={styles.rowIcon} aria-hidden="true">
+                        <Icon size={18} />
+                      </span>
+                      <span className={styles.rowText}>
+                        <span className={styles.rowLabel}>{channel.label}</span>
+                        <span className={styles.rowValue}>
+                          {channel.value}
+                        </span>
+                      </span>
+                      <ArrowUpRight size={18} />
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
